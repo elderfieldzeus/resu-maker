@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "react-router-dom": "^6.25.0",
+    "tailwindcss": "^3.4.6"
+  },
+  "scripts": {
+    "tailwind": "tailwindcss -i ./resumaker/public/input.css -o ./resumaker/public/tailwind.css --watch"
+  }
+}
