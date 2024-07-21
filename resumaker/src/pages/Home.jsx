@@ -30,6 +30,14 @@ export default function Home() {
                 ],
                 start: "2019",
                 end: "Ongoing"
+            },
+            {
+                title: "IT Engineer",
+                descriptions: [
+                    "HACKED EVERYONE."
+                ],
+                start: "2019",
+                end: "Ongoing"
             }]
         },
         {
@@ -48,7 +56,7 @@ export default function Home() {
 
     const [info, setInfo] = useState(resumeInfo);
     return (
-        <div className="bg-gray-200 min-h-screen flex py-4 flex-wrap justify-center">
+        <div className="bg-gray-200 min-h-screen py-4 flex flex-wrap justify-center items-center">
             <Docs info = {info}></Docs>
             <Form info = {info} setInfo = {setInfo}></Form>
         </div>

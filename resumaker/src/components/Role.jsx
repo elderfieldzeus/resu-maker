@@ -8,9 +8,9 @@ export default function Role( { role }) {
             <ul>
                 {role.descriptions.map((des, index) => {
                     return (
-                    <div className="flex items-center gap-1 pl-2">
+                    <div key={index} className="flex items-center gap-1 pl-2">
                         <span className="ml-2 dot-svg size-2 bg-black"></span>
-                        <li key={index} > {des} </li>
+                        <li > {des} </li>
                     </div>
                     );
                 })}

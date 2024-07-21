@@ -5,7 +5,7 @@ export default function Experience( { experience } ) {
         <div className="w-full">
             {experience.map((ex, i) => {
                 return (
-                    <div key={i} className="w-full mb-5">
+                    <div key={i} className="w-full mb-2">
                         <div className="w-full flex justify-between items-center">
                             <h1 className="text-lg text-gray-500">{ex.company}</h1>
                             <h1>{ex.location}</h1>

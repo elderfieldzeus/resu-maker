@@ -5,7 +5,7 @@ export default function Docs({info}) {
     console.log(info);
     return (
         <div className="h-full px-5">
-            <div className="w-[8.5in] h-[11in] text-base bg-white pt-[0.5in] pl-[0.6in] pr-[0.5in] pb-[0.67in] overflow-hidden font-sans">
+            <div className="w-[8.5in] h-[11in] text-base bg-white pt-[0.5in] pl-[0.6in] pr-[0.5in] pb-[0.67in] overflow-hidden font-sans shadow-md">
 
                 <div id="Personal_Info" className="flex flex-col items-center">
                     <h1 className="text-lg font-bold font-['Times_New_Roman']">{info.firstName.toUpperCase()} {info.lastName.toUpperCase()}</h1>

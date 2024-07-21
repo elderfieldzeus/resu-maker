@@ -31,7 +31,7 @@ export default function SkillInput({info, setInfo, index, skillType}) {
                 <div>
                     <div className='flex items-center gap-[0.125rem]'>
                         <h1 className="mb-2">Skills:</h1>
-                        <button onClick={addSkill}><span className='add-svg size-5 bg-blue-500 mb-1'></span></button>
+                        <button onClick={addSkill}><span className='add-svg size-5 bg-blue-500 mb-2'></span></button>
                     </div>
                     <div className="grid grid-cols-2 gap-2 w-full">
                         {skillType.skills.map((skill, i) => {
