@@ -26,7 +26,7 @@ export default function Home() {
             roles: [{
                 title: "Software Engineer",
                 descriptions: [
-                    "Created the newest iPhone 17's microchip."
+                    "Led the development and optimization of the microchip for the latest iPhone models, improving performance and energy efficiency."
                 ],
                 start: "2019",
                 end: "Ongoing"
@@ -34,7 +34,7 @@ export default function Home() {
             {
                 title: "IT Engineer",
                 descriptions: [
-                    "HACKED EVERYONE."
+                    "Implemented advanced security measures to protect company data and prevent cyber threats, ensuring compliance with industry standards."
                 ],
                 start: "2019",
                 end: "Ongoing"
@@ -46,7 +46,7 @@ export default function Home() {
             roles: [{
                 title: "Data Engineer",
                 descriptions: [
-                    "Created Microsoft."
+                    "Developed and maintained data pipelines, improving data processing speed and accuracy, leading to better business insights and decision-making."
                 ],
                 start: "2013",
                 end: "2019"

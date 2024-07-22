@@ -21,10 +21,18 @@ export default function ExperienceForm({ info, setInfo, experience, index }) {
         setInfo({...info, experience: info.experience})
     }
 
+    function deleteCompany() {
+        info.experience.splice(index, 1);
+        setInfo({...info, experience: info.experience});
+    }
+
     return (
         <div>
             {index == 0 || <hr className="border-t border-gray-300 my-2" />}
-            <h1 className='mb-2'>Company #{index + 1}:</h1>
+            <div className='flex justify-between'>
+                <h1 className='text-lg mb-2'>Company #{index + 1}:</h1>
+                <button onClick={deleteCompany}><span className="delete-svg size-5 bg-red-500"></span></button>
+            </div>
             <div className="grid grid-cols-2 gap-4">
                 <input className="rounded-md pl-2 py-1" type="text" placeholder="Company Name" value={experience.company} onChange={changeCompany}/>
                 <input className="rounded-md pl-2 py-1" type="text" placeholder="Company Location" value={experience.location} onChange={changeLocation}/>
