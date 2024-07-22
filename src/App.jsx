@@ -11,8 +11,8 @@ function App() {
   return (
     <div>
       <title>Resu-maker</title>
-      <link rel="stylesheet" href="/svg.css" />
-      <link rel="stylesheet" href="/tailwind.css" />
+      {/* <link rel="stylesheet" href="/svg.css" />
+      <link rel="stylesheet" href="/tailwind.css" /> */}
       <Nav></Nav>
       <Home/>
     </div>

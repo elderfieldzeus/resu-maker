@@ -31,7 +31,7 @@ export default function RoleForm( {info, setInfo, exIndex, role, index} ) {
         <div>
             <hr className="border-t border-gray-300 my-2" />
             <div className="flex justify-between">
-                <h1>Role #{index}:</h1>
+                <h1>Role #{index + 1}:</h1>
                 <button onClick={deleteRole}><span className="delete-svg size-4 bg-red-300 mr-2"></span></button>
             </div>
             <div className="grid mt-2">
