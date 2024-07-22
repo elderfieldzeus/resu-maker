@@ -114,7 +114,7 @@ export default function Form({info, setInfo}) {
             <div className='flex justify-between items-center'>
                 <div className="flex gap-2 items-center">
                     <h1 className="mt-5 mb-3 text-xl">Experience</h1>
-                    <button onClick={addCompany} className="rounded-full bg-blue-500 size-5 mt-1 flex items-center justify-center"><span className="add-svg size-4 mt-[0.125rem] bg-white"></span></button>
+                    <button onClick={addCompany} className="rounded-full bg-blue-500 size-5 mt-1 flex items-center justify-center"><span className="add-svg size-4 bg-white"></span></button>
                 </div>
                 <button onClick={dropDown('ExperienceInfo')}><span className='drop-svg size-4 bg-black'></span></button>
             </div>
