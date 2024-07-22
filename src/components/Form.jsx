@@ -34,10 +34,29 @@ export default function Form({info, setInfo}) {
         setInfo({...info, experience: ex});
     }
 
+    function dropDown(id) {
+        return (e) => {
+            const div = document.getElementById(id);
+
+            if(div.classList.contains('hidden')) {
+                div.classList.remove('hidden');
+                e.target.classList.add('rotate-180');
+            }
+            else {
+                div.classList.add('hidden');
+                e.target.classList.remove('rotate-180');
+            }
+        } 
+    }
+    
+
     return (
         <div className="py-3 w-full md:w-[32rem] h-[11in] overflow-y-scroll px-5 leading-none">
-            <h1 className="mb-3 text-xl">Personal Information</h1>
-            <div id="PersonalInfo" className="flex flex-col gap-4">
+            <div className='flex justify-between items-center'>
+                <h1 className="mb-3 text-xl">Personal Information</h1>
+                <button onClick={dropDown('PersonalInfo')}><span className='drop-svg size-4 bg-black'></span></button>
+            </div>
+            <div id="PersonalInfo" className="flex flex-col gap-4 hidden">
                 <div className="grid grid-cols-2 gap-4">
                     <input className="rounded-md pl-2 py-1" type="text" placeholder="First Name" value={info.firstName} onChange={changeInfo("firstName")}/>
                     <input className="rounded-md pl-2 py-1" type="text" placeholder="Last Name" value={info.lastName} onChange={changeInfo("lastName")}/>
@@ -55,16 +74,28 @@ export default function Form({info, setInfo}) {
                 </div>
             </div>
 
-            <h1 className="mt-5 mb-3 text-xl">Summary</h1>
-            <div id="SummaryInfo" className="flex flex-col gap-4">
+            <hr className='border-t border-gray-700 my-3'/>
+
+            <div className='flex justify-between items-center'>
+                <h1 className="mb-3 text-xl">Summary</h1>
+                <button onClick={dropDown('SummaryInfo')}><span className='drop-svg size-4 bg-black'></span></button>
+            </div>
+            <div id="SummaryInfo" className="flex flex-col gap-4 hidden">
                 <textarea name="summary" id="summary" placeholder="Short Summary" value={info.summary} className="px-2 py-2 leading-5 rounded-md min-h-48" onChange={changeInfo("summary")}></textarea>
             </div>
 
-            <div className="flex gap-2 items-center">
-                <h1 className="mt-5 mb-3 text-xl">Skill Types</h1>
-                <button onClick={addSkillType} className="rounded-full bg-blue-500 size-5 mt-1 flex items-center justify-center"><span className="add-svg size-4 bg-white"></span></button>
+            <hr className='border-t border-gray-700 my-3'/>
+
+            <div className='flex justify-between items-center'>
+                <div className="flex gap-2 items-center">
+                    <h1 className="mt-5 mb-3 text-xl">Skill Types</h1>
+                    <button onClick={addSkillType} className="rounded-full bg-blue-500 size-5 mt-1 flex items-center justify-center"><span className="add-svg size-4 bg-white"></span></button>
+                </div>
+                <button onClick={dropDown('SkillsInfo')}><span className='drop-svg size-4 bg-black'></span></button>
             </div>
-            <div id="SkillsInfo" className="flex flex-col gap-4">
+
+            
+            <div id="SkillsInfo" className="flex flex-col gap-4 hidden">
                 {info.skillTypes.map((type, index) => {
                     return (
                         <SkillInput 
@@ -78,11 +109,18 @@ export default function Form({info, setInfo}) {
                 })}
             </div>
 
-            <div className="flex gap-2 items-center">
-                <h1 className="mt-5 mb-3 text-xl">Experience</h1>
-                <button onClick={addCompany} className="rounded-full bg-blue-500 size-5 mt-1 flex items-center justify-center"><span className="add-svg size-4 mt-[0.125rem] bg-white"></span></button>
+            <hr className='border-t border-gray-700 my-3'/>
+
+            <div className='flex justify-between items-center'>
+                <div className="flex gap-2 items-center">
+                    <h1 className="mt-5 mb-3 text-xl">Experience</h1>
+                    <button onClick={addCompany} className="rounded-full bg-blue-500 size-5 mt-1 flex items-center justify-center"><span className="add-svg size-4 mt-[0.125rem] bg-white"></span></button>
+                </div>
+                <button onClick={dropDown('ExperienceInfo')}><span className='drop-svg size-4 bg-black'></span></button>
             </div>
-            <div id="SummaryInfo" className="flex flex-col gap-4">
+
+            
+            <div id="ExperienceInfo" className="flex flex-col gap-4 hidden">
                 {info.experience.map((experience, index) => {
                     return (
                         <ExperienceForm
@@ -95,6 +133,8 @@ export default function Form({info, setInfo}) {
                     );
                 })}
             </div>
+
+            <hr className='border-t border-gray-700 my-3'/>
         </div>
     )
 }
