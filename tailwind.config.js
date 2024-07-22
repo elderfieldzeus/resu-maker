@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./resumaker/**/*.{jsx,js,html}"],
+  content: ["./**/*.{jsx,js,html}"],
   theme: {
     extend: {},
   },
