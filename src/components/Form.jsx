@@ -40,11 +40,11 @@ export default function Form({info, setInfo}) {
 
             if(div.classList.contains('hidden')) {
                 div.classList.remove('hidden');
-                e.target.classList.add('rotate-180');
+                e.currentTarget.classList.add('rotate-180');
             }
             else {
                 div.classList.add('hidden');
-                e.target.classList.remove('rotate-180');
+                e.currentTarget.classList.remove('rotate-180');
             }
         } 
     }
