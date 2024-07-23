@@ -51,6 +51,13 @@ export default function Home() {
                 start: "2013",
                 end: "2019"
             }]
+        }],
+        education: [{
+            school: "University of San Carlos",
+            location: "Cebu, PH",
+            degree: "BS Computer Science",
+            start: "2023",
+            end: "2026"
         }]
     }
 

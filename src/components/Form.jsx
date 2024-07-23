@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import SkillInput from '../components/SkillInput'
 import ExperienceForm from '../components/ExperienceForm'
+import EducationForm from '../components/EducationForm'
 
 export default function Form({info, setInfo}) {
     const [type, setType] = useState(info.skillTypes);
     const [ex, setEx] = useState(info.experience);
+    const ed = info.education;
 
     const changeInfo = (type) => (event) => {
         setInfo({...info, [type]: event.target.value});
@@ -32,6 +34,17 @@ export default function Form({info, setInfo}) {
         })
         setEx(ex);
         setInfo({...info, experience: ex});
+    }
+
+    function addEducation() {
+        ed.push({
+            school: "School",
+            location: "Location",
+            degree: "Degree",
+            start: "Start",
+            end: "End"
+        });
+        setInfo({...info, education: ed});
     }
 
     function dropDown(id) {
@@ -130,6 +143,30 @@ export default function Form({info, setInfo}) {
                             experience = {experience}
                             index = {index}
                         ></ExperienceForm>
+                    );
+                })}
+            </div>
+
+            <hr className='border-t border-gray-700 my-3'/>
+
+            <div className='flex justify-between items-center'>
+                <div className="flex gap-2 items-center">
+                    <h1 className="mt-5 mb-3 text-xl">Education</h1>
+                    <button onClick={addEducation} className="rounded-full bg-blue-500 size-5 mt-1 flex items-center justify-center"><span className="add-svg size-4 bg-white"></span></button>
+                </div>
+                <button onClick={dropDown('EducationInfo')}><span className='drop-svg size-4 bg-black'></span></button>
+            </div>
+
+            <div id="EducationInfo" className="flex flex-col gap-4 hidden">
+                {info.education.map((education, index) => {
+                    return (
+                        <EducationForm
+                            key = {index}
+                            info = {info}
+                            setInfo = {setInfo}
+                            education = {education}
+                            index = {index}
+                        ></EducationForm>
                     );
                 })}
             </div>

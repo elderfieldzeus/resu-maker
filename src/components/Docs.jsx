@@ -1,5 +1,6 @@
 import Skills from '../components/Skills'
 import Experience from '../components/Experience'
+import Education from '../components/Education'
 
 export default function Docs({info}) {
     console.log(info);
@@ -33,6 +34,12 @@ export default function Docs({info}) {
                     <h1 className="font-bold">Experience</h1>
                     <hr className="w-full my-1 border-t-3 border-black" />
                     <Experience experience = {info.experience}></Experience>
+                </div>
+
+                <div id="Education" className="w-full flex flex-col items-center mt-4">
+                    <h1 className="font-bold">Education</h1>
+                    <hr className="w-full my-1 border-t-3 border-black" />
+                    <Education education = {info.education}></Education>
                 </div>
             </div>
         </div>
