@@ -65,6 +65,11 @@ export default function Form({info, setInfo}) {
 
     return (
         <div className="py-3 w-full md:w-[32rem] h-[11in] overflow-y-scroll px-5 leading-none">
+            <div className='flex items-center w-full justify-center mb-6 rounded-lg bg-black p-2'>
+                <span className="logo-svg size-20 bg-white"></span>
+                <p className="text-white font-semibold font-mono text-2xl">esu-maker</p>
+            </div>
+
             <div className='flex justify-between items-center'>
                 <h1 className="mb-3 text-xl">Personal Information</h1>
                 <button onClick={dropDown('PersonalInfo')}><span className='drop-svg size-4 bg-black'></span></button>
